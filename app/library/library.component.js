@@ -1,22 +1,29 @@
+"use strict";
+var __extends = (this && this.__extends) || function (d, b) {
+    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
+    function __() { this.constructor = d; }
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+};
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") return Reflect.decorate(decorators, target, key, desc);
-    switch (arguments.length) {
-        case 2: return decorators.reduceRight(function(o, d) { return (d && d(o)) || o; }, target);
-        case 3: return decorators.reduceRight(function(o, d) { return (d && d(target, key)), void 0; }, void 0);
-        case 4: return decorators.reduceRight(function(o, d) { return (d && d(target, key, o)) || o; }, desc);
-    }
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 var core_1 = require('@angular/core');
 require('rxjs/add/operator/map');
-var LibraryComponent = (function () {
+var material_view_1 = require('../material.view');
+var LibraryComponent = (function (_super) {
+    __extends(LibraryComponent, _super);
     function LibraryComponent() {
+        _super.apply(this, arguments);
     }
     LibraryComponent = __decorate([
         core_1.Component({
-            template: "\n    <h3>This is Library</h3><br/>\n\n\n    <form class=\"form-horizontal\">\n      <div class=\"form-group\">\n        <label class=\"col-sm-2\" for=\"ch1\">Touch sounds</label>\n        <div class=\"col-sm-10\">\n          <div class=\"checkbox\">\n            <label>\n              <input id=\"ch1\" type=\"checkbox\" checked=\"\">\n            </label>\n          </div>\n          <p class=\"help-block\">This shows the generic label variant.</p>\n        </div>\n      </div>\n      <div class=\"form-group\">\n        <label class=\"col-sm-2 control-label\" for=\"ch3\">Vibrate on touch</label>\n        <div class=\"col-sm-10\">\n          <div class=\"checkbox\">\n            <label>\n              <input id=\"ch3\" type=\"checkbox\">\n            </label>\n          </div>\n          <p class=\"help-block\">This shows the <code>control-label</code> variant.</p>\n        </div>\n      </div>\n    </form>\n\n\n  "
+            templateUrl: 'app/library/library.component.html'
         })
     ], LibraryComponent);
     return LibraryComponent;
-})();
+}(material_view_1.MaterialView));
 exports.LibraryComponent = LibraryComponent;
 //# sourceMappingURL=library.component.js.map

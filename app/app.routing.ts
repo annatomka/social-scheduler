@@ -8,6 +8,7 @@ const appRoutes: Routes = [
         pathMatch: 'full'
     },
 
+    
     { path: 'library', component: LibraryComponent },
     //{
     //    path: 'heroes',

@@ -20,26 +20,35 @@
     <!-- Polyfill(s) for older browsers -->
 
     <script src="node_modules/jquery/dist/jquery.js"></script>
-
     <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="node_modules/bootstrap-material-design/dist/js/material.js"></script>
+    <script src="node_modules/bootstrap-material-design/dist/js/ripples.js"></script>
     <script src="node_modules/core-js/client/shim.min.js"></script>
 
     <script src="node_modules/zone.js/dist/zone.js"></script>
     <script src="node_modules/reflect-metadata/Reflect.js"></script>
     <script src="node_modules/systemjs/dist/system.src.js"></script>
-
-
-    <script src="node_modules/bootstrap-material-design/dist/js/material.js"></script>
-    <script src="node_modules/bootstrap-material-design/dist/js/ripples.js"></script>
-
     <script src="systemjs.config.js"></script>
+
     <script>
       System.import('app').catch(function(err){ console.error(err); });
     </script>
+
+
+    <!--<script src="node_modules/bootstrap-material-design/dist/js/material.js"></script>-->
+    <!--<script src="node_modules/bootstrap-material-design/dist/js/ripples.js"></script>-->
+
   </head>
 
   <body>
     <my-app><i class="zmdi zmdi-rotate-right zmdi-hc-spin"></i></my-app>
-
+    <div class="form-group">
+      <div class="checkbox">
+        <label>
+          <input type="checkbox"> Notifications
+        </label>
+      </div>
+      <p class="help-block">Notify me about updates to apps or games that I've downloaded</p>
+    </div>
   </body>
 </html>

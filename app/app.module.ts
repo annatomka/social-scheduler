@@ -1,4 +1,4 @@
-import { NgModule }      from '@angular/core';
+import { NgModule, OnInit }      from '@angular/core';
 import { routing,
     appRoutingProviders } from './app.routing';
 
@@ -16,5 +16,9 @@ import { AppComponent }  from './app.component';
     ],
     bootstrap: [AppComponent]
 })
-export class AppModule {
+export class AppModule implements OnInit{
+
+    ngOnInit(){
+        $.material.init();
+    }
 }
